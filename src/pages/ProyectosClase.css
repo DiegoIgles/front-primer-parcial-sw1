@@ -1,0 +1,107 @@
+/* Contenedor principal */
+.proyectos-container {
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Título de la página */
+  .proyectos-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  /* Mensajes de error */
+  .proyectos-container .mensaje {
+    color: red;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Lista de proyectos */
+  .proyectos-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Elemento de lista (cada proyecto) */
+  .proyectos-list li {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #ddd;
+  }
+  
+  /* Efecto hover sobre cada elemento de la lista */
+  .proyectos-list li:hover {
+    background-color: #eaf2f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
+  
+  /* Título del proyecto */
+  .proyectos-list li h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  /* Descripción del proyecto */
+  .proyectos-list li p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Fecha de creación */
+  .proyectos-list li small {
+    font-size: 0.875rem;
+    color: #777;
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  /* Botón de eliminar */
+  .proyectos-list li button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  /* Efecto hover sobre el botón */
+  .proyectos-list li button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Estilo para cuando no hay proyectos */
+  .proyectos-container .no-proyectos {
+    text-align: center;
+    color: #888;
+    font-size: 1.2rem;
+  }
+  
+  /* Estilo para mensaje de carga */
+  .proyectos-container .loading {
+    font-size: 1.5rem;
+    color: #f39c12;
+    font-weight: bold;
+    text-align: center;
+  }
+  

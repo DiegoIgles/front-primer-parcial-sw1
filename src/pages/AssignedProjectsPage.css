@@ -1,0 +1,57 @@
+/* Contenedor principal */
+.assigned-container {
+
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: #fefefe;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Título principal */
+.assigned-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Mensaje de error */
+.assigned-error {
+  color: red;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+/* Estilo para cada tarjeta de proyecto */
+.project-card {
+  background-color: #f4f4f4;
+  border-left: 5px solid #4CAF50;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+  transition: all 0.3s ease; /* Transición para suavizar el efecto de hover */
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra inicial de la tarjeta */
+}
+
+/* Efecto hover en las tarjetas de proyecto */
+.project-card:hover {
+  transform: translateY(-5px); /* Desplazar ligeramente la tarjeta hacia arriba */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumentar la sombra para hacerla más destacada */
+  background-color: #eaf2f8; /* Cambiar color de fondo cuando el ratón pasa */
+}
+
+/* Título del proyecto */
+.project-title {
+  font-size: 20px;
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+/* Descripción del proyecto */
+.project-description {
+  font-size: 16px;
+  color: #555;
+}

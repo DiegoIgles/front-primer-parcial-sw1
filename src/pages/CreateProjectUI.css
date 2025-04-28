@@ -1,0 +1,53 @@
+.ui-editor-container {
+    max-width: 1280px;
+    margin: 22px auto;
+    text-align: center;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  
+  .form input, .form textarea {
+    width: 70%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .editor-toolbar {
+    margin-bottom: 15px;
+  }
+  
+  .editor-toolbar button {
+    margin: 0 10px;
+    padding: 10px 16px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .editor-toolbar button:hover {
+    background-color: #45a049;
+  }
+  
+  .editor-canvas {
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  }
+  
+  .mensaje {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+  
