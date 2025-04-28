@@ -14,7 +14,7 @@ const ProyectosClase = () => {
       }
 
       try {
-        const response = await fetch('http://localhost:4000/api/proyecto-clase/', {
+        const response = await fetch('https://backend-sockets-production.up.railway.app/api/proyecto-clase/', {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -45,7 +45,7 @@ const ProyectosClase = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:4000/api/proyecto-clase/delete/${id}`, {
+      const response = await fetch(`https://backend-sockets-production.up.railway.app/api/proyecto-clase/delete/${id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,

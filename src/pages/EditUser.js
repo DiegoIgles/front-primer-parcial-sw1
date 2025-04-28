@@ -38,7 +38,7 @@ const EditUser = () => {
     // Aquí realizamos la solicitud PUT para editar el usuario
     axios
       .put(
-        `http://localhost:4000/api/users/${id}`,
+        `https://backend-sockets-production.up.railway.app/api/users/${id}`,
         {
           username: user.username,
           role: user.role,

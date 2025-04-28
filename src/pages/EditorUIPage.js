@@ -5,7 +5,7 @@ import { fabric } from 'fabric';
 import io from 'socket.io-client';
 import './EditorUIPage.css';
 
-const socket = io('http://localhost:4000'); // Asegúrate que apunte a tu backend
+const socket = io('https://backend-sockets-production.up.railway.app'); // Asegúrate que apunte a tu backend
 
 const EditUIPage = () => {
   const [error, setError] = useState('');
@@ -23,7 +23,7 @@ const EditUIPage = () => {
       return;
     }
 
-    axios.get(`http://localhost:4000/api/projects/edit-ui/${id}`, {
+    axios.get(`https://backend-sockets-production.up.railway.app/api/projects/edit-ui/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -170,7 +170,7 @@ const EditUIPage = () => {
     const token = localStorage.getItem('token');
 
     try {
-       await axios.put(`http://localhost:4000/api/projects/update/${id}`, {
+       await axios.put(`https://backend-sockets-production.up.railway.app/api/projects/update/${id}`, {
         fabricJson: canvasJson,
       }, {
         headers: {

@@ -22,7 +22,7 @@ function ProyectoAsignadoUML() {
       const decoded = JSON.parse(atob(token.split('.')[1]));
       const userId = decoded.id;
 
-      axios.get(`http://localhost:4000/api/proyecto-clase/assigned-project/${userId}`, {
+      axios.get(`https://backend-sockets-production.up.railway.app/api/proyecto-clase/assigned-project/${userId}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -59,7 +59,7 @@ function ProyectoAsignadoUML() {
       const token = localStorage.getItem('token');
       const response = await axios({
         method: 'post',
-        url: `http://localhost:4000/api/proyecto-clase/export-angular/${proyecto.id}`,
+        url: `https://backend-sockets-production.up.railway.app/api/proyecto-clase/export-angular/${proyecto.id}`,
         responseType: 'blob',
         headers: {
           Authorization: `Bearer ${token}`

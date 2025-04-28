@@ -12,7 +12,7 @@ const ProjectsList = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/api/projects', {
+        const response = await axios.get('https://backend-sockets-production.up.railway.app/api/projects', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -33,7 +33,7 @@ const ProjectsList = () => {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:4000/api/projects/delete/${projectId}`, {
+      await axios.delete(`https://backend-sockets-production.up.railway.app/api/projects/delete/${projectId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

@@ -19,7 +19,7 @@ const AsignarProyectoUML = () => {
     const fetchUsers = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:4000/api/users', {
+        const response = await axios.get('https://backend-sockets-production.up.railway.app/api/users', {
           headers: {
             Authorization: `Bearer ${token}`, // Incluir el token en los encabezados
           },
@@ -35,7 +35,7 @@ const AsignarProyectoUML = () => {
     const fetchProjects = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:4000/api/proyecto-clase', {
+        const response = await axios.get('https://backend-sockets-production.up.railway.app/api/proyecto-clase', {
           headers: {
             Authorization: `Bearer ${token}`, // Incluir el token en los encabezados
           },
@@ -56,7 +56,7 @@ const AsignarProyectoUML = () => {
   
       axios
         .post(
-          'http://localhost:4000/api/proyecto-clase/assign-user', 
+          'https://backend-sockets-production.up.railway.app/api/proyecto-clase/assign-user', 
           {
             userId: selectedUser,
             proyectoClaseId: selectedProject,

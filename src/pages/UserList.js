@@ -25,7 +25,7 @@ const UsersList = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/api/users', {
+        const response = await axios.get('https://backend-sockets-production.up.railway.app/api/users', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -42,7 +42,7 @@ const UsersList = () => {
   // Eliminar usuario
   const handleDelete = async (userId) => {
     try {
-      await axios.delete(`http://localhost:4000/api/users/${userId}`, {
+      await axios.delete(`https://backend-sockets-production.up.railway.app/api/users/${userId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

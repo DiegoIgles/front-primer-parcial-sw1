@@ -21,7 +21,7 @@ const AssignedProjectsPage = () => {
     const decoded = JSON.parse(atob(token.split('.')[1]));
     const userId = decoded.id;
 
-    axios.get(`http://localhost:4000/api/projects/assigned-project/${userId}`)
+    axios.get(`https://backend-sockets-production.up.railway.app/api/projects/assigned-project/${userId}`)
       .then(response => {
         if (response.data.proyecto) {
           setAssignedProject(response.data.proyecto);
@@ -51,7 +51,7 @@ const AssignedProjectsPage = () => {
         return;
       }
 
-      const response = await axios.get(`http://localhost:4000/api/projects/edit-ui/${assignedProject.id}`, {
+      const response = await axios.get(`https://backend-sockets-production.up.railway.app/api/projects/edit-ui/${assignedProject.id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
 

@@ -11,7 +11,7 @@ const Register = ({ onRegisterSuccess }) => {
     event.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:4000/api/register', {
+      const response = await axios.post('https://backend-sockets-production.up.railway.app/api/register', {
         username,
         password,
       });

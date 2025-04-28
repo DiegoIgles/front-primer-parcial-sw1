@@ -28,7 +28,7 @@ const [descripcionProyecto, setDescripcionProyecto] = useState('');
   
       const json = canvasRef.current.toJSON();
   
-      const response = await fetch('http://localhost:4000/api/proyecto-clase/create', {
+      const response = await fetch('https://backend-sockets-production.up.railway.app/api/proyecto-clase/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
