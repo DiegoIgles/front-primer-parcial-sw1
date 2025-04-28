@@ -97,7 +97,7 @@ const CreateProjectUI = () => {
     const token = localStorage.getItem('token');
 
     try {
-      const response = await axios.post('http://localhost:4000/api/projects/create', {
+      const response = await axios.post('https://backend-sockets-production.up.railway.app/api/projects/create', {
         nombre,
         descripcion,
         fabricJson: canvasJson,
