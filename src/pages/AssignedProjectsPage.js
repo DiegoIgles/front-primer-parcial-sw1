@@ -56,8 +56,23 @@ const AssignedProjectsPage = () => {
       });
 
       const proyecto = response.data.proyecto;
-      const fabricJson = JSON.parse(JSON.parse(proyecto.fabricJson));
-      const componentName = `${proyecto.nombre.replace(/\s+/g, '')}UiComponent`;
+      let fabricJson;
+      try {
+        if (typeof proyecto.fabricJson === 'string') {
+          fabricJson = JSON.parse(proyecto.fabricJson);
+          if (typeof fabricJson === 'string') {
+            fabricJson = JSON.parse(fabricJson); // doble parseo solo si es necesario
+          }
+        } else {
+          fabricJson = proyecto.fabricJson;
+        }
+      } catch (e) {
+        console.error('Error al parsear fabricJson:', e);
+        setError('Error al procesar el proyecto.');
+        setIsGenerating(false);
+        return;
+      }
+            const componentName = `${proyecto.nombre.replace(/\s+/g, '')}UiComponent`;
       const selectorName = proyecto.nombre.toLowerCase().replace(/\s+/g, '-');
 
       // Archivo principal del componente - Versión corregida
