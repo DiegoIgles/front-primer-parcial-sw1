@@ -14,7 +14,7 @@ const EditUser = () => {
   useEffect(() => {
     // Obtener los datos del usuario para editarlos
     axios
-      .get(`http://localhost:4000/api/users/${id}`, {
+      .get(`https://backend-sockets-production.up.railway.app/api/users/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
